@@ -9,7 +9,7 @@
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/UyP.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#1a1a1a"
     },
     "ios": {
@@ -22,7 +22,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/UyP.png"
+      "favicon": "./assets/UyP.png",
+      "name": "Promocional 2025"
     }
   }
 }
