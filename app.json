@@ -25,11 +25,6 @@
     "web": {
       "favicon": "./assets/UyP.png",
       "name": "Promocional 2025"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "a485be65-903a-4d0a-9cf3-8a7bd484820f"
-      }
     }
   }
 }
