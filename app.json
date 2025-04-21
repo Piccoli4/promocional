@@ -9,7 +9,7 @@
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/UyP.png",
-      "resizeMode": "cover",
+      "resizeMode": "contain",
       "backgroundColor": "#1a1a1a"
     },
     "ios": {
@@ -17,13 +17,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/UyP.png",
+        "foregroundImage": "./assets/uyp_icon.png",
         "backgroundColor": "#1a1a1a"
-      }
+      },
+      "package": "com.piccoli.AppPromocional"
     },
     "web": {
       "favicon": "./assets/UyP.png",
       "name": "Promocional 2025"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a485be65-903a-4d0a-9cf3-8a7bd484820f"
+      }
     }
   }
 }
