@@ -57,7 +57,6 @@ const Posiciones = () => {
         Tabla de Posiciones{"\n"}Promocional 2025
       </Text>
       {loading ? (
-        // Mostrar un indicador de carga mientras se obtienen los datos
         <ActivityIndicator size="large" color="#A90000" />
       ) : (
         <>
@@ -74,20 +73,27 @@ const Posiciones = () => {
           </View>
 
           {
-            tabla.map((item, index) => (
-              <View key={item.equipo} style={styles.row}>
-                <Text style={styles.cell}>{index + 1}</Text>
-                <Text style={styles.equipoCell}>{item.equipo}</Text>
-                <Text style={styles.cell}>{item.pj}</Text>
-                <Text style={styles.cell}>{item.pg}</Text>
-                <Text style={styles.cell}>{item.pp}</Text>
-                <Text style={styles.cell}>{item.pf}</Text>
-                <Text style={styles.cell}>{item.pc}</Text>
-                <Text style={styles.cell}>{item.dg}</Text>
-                <Text style={styles.cell}>{item.puntos}</Text>
-              </View>
-            ))
+            tabla.map((item, index) => {
+              const isLast = index === tabla.length - 1;
+              return (
+                <View key={item.equipo} style={styles.row}>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{index + 1}</Text>
+                  <Text style={[styles.equipoCell, isLast && styles.textOut]}>{item.equipo}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.pj}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.pg}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.pp}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.pf}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.pc}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.dg}</Text>
+                  <Text style={[styles.cell, isLast && styles.textOut]}>{item.puntos}</Text>
+                </View>
+              );
+            })            
           }
+          <View style={styles.legendContainer}>
+            <View style={styles.legendCircle} />
+            <Text style={styles.legendText}>Quedaría fuera de playoffs</Text>
+          </View>
         </>
       )}
     </View>
@@ -115,7 +121,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     backgroundColor: '#a90000',
-    padding: 6
+    padding: 6,
+    borderRadius: 3
   },
   headerCell: {
     flex: 0.8,
@@ -130,6 +137,7 @@ const styles = StyleSheet.create({
     padding: 6,
     marginBottom: 1,
     alignItems: 'center',
+    borderRadius: 3
   },
   cell: {
     flex: 0.8,
@@ -142,8 +150,27 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'white',
     textAlign: 'center'
-  }
-  
+  },
+  textOut: {
+    color: '#A90000'
+  },  
+  legendContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+    marginLeft: 6
+  },
+  legendCircle: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: '#A90000',
+    marginRight: 8
+  },
+  legendText: {
+    color: '#A90000',
+    fontSize: 12
+  }  
 });
 
 export default Posiciones;
