@@ -51,20 +51,6 @@ const Posiciones = () => {
       }));
     };
 
-    const renderItem = ({ item, index }) => (
-      <View style={styles.row}>
-        <Text style={styles.cell}>{index + 1}</Text>
-        <Text style={styles.equipoCell}>{item.equipo}</Text>
-        <Text style={styles.cell}>{item.pj}</Text>
-        <Text style={styles.cell}>{item.pg}</Text>
-        <Text style={styles.cell}>{item.pp}</Text>
-        <Text style={styles.cell}>{item.pf}</Text>
-        <Text style={styles.cell}>{item.pc}</Text>
-        <Text style={styles.cell}>{item.dg}</Text>
-        <Text style={styles.cell}>{item.puntos}</Text>
-      </View>
-    );
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
@@ -111,7 +97,7 @@ const Posiciones = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    marginTop: 50,
+    marginTop: 25,
     padding: 10,
     backgroundColor: '#1a1a1a',
     borderRadius: 10,
