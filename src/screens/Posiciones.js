@@ -78,7 +78,7 @@ const Posiciones = () => {
               return (
                 <View key={item.equipo} style={styles.row}>
                   <Text style={[styles.cell, isLast && styles.textOut]}>{index + 1}</Text>
-                  <Text style={[styles.equipoCell, isLast && styles.textOut]}>{item.equipo}</Text>
+                  <Text style={[styles.equipoCell, {fontSize: 13} , isLast && styles.textOut]}>{item.equipo}</Text>
                   <Text style={[styles.cell, isLast && styles.textOut]}>{item.pj}</Text>
                   <Text style={[styles.cell, isLast && styles.textOut]}>{item.pg}</Text>
                   <Text style={[styles.cell, isLast && styles.textOut]}>{item.pp}</Text>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   cell: {
     flex: 0.8,
-    fontSize: 14,
+    fontSize: 13,
     color: 'white',
     textAlign: 'center'
   },
