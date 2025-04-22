@@ -122,18 +122,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#a90000',
     padding: 6,
-    borderRadius: 3
+    borderRadius: 3,
+    marginBottom: 1
   },
   headerCell: {
     flex: 0.8,
-    fontSize: 12,
+    fontSize: 14,
     color: 'white',
     textAlign: 'center',
     fontWeight: 'bold'
   },
   row: {
     flexDirection: 'row',
-    backgroundColor: '#2c2c2c',
+    backgroundColor: '#333333',
     padding: 6,
     marginBottom: 1,
     alignItems: 'center',
@@ -141,18 +142,21 @@ const styles = StyleSheet.create({
   },
   cell: {
     flex: 0.8,
-    fontSize: 12,
+    fontSize: 14,
     color: 'white',
     textAlign: 'center'
   },
   equipoCell: {
     flex: 2.2,
-    fontSize: 12,
+    fontSize: 14,
     color: 'white',
     textAlign: 'center'
   },
   textOut: {
-    color: '#A90000'
+    color: '#A90000',
+    textShadowColor: '#000',
+    textShadowOffset: {width: 0.4, height: 0.4},
+    textShadowRadius: 1
   },  
   legendContainer: {
     flexDirection: 'row',
@@ -161,15 +165,19 @@ const styles = StyleSheet.create({
     marginLeft: 6
   },
   legendCircle: {
-    width: 12,
-    height: 12,
+    width: 10,
+    height: 10,
     borderRadius: 6,
     backgroundColor: '#A90000',
     marginRight: 8
   },
   legendText: {
     color: '#A90000',
-    fontSize: 12
+    fontSize: 14,
+    shadowColor: '#A90000',
+    textShadowColor: '#000',
+    textShadowOffset: {width: 0.1, height: 0.1},
+    textShadowRadius: 0.5
   }  
 });
 
