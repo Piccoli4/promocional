@@ -4,6 +4,7 @@ import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Posiciones from './src/screens/Posiciones';
 import escudoUyP from './assets/UyP.png';
 import Resultados from './src/screens/Resultados';
+import Header from './src/components/Header';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         locations={[0.25, 1]}
         style={styles.background}
       >
+        <Header />
         <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: 150 }]}>
           <Posiciones />
           <Resultados />
