@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   legendContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 5,
     marginLeft: 6
   },
   legendCircle: {
