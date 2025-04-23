@@ -90,10 +90,10 @@ const Posiciones = () => {
               );
             })            
           }
-          <View style={styles.legendContainer}>
+          {/* <View style={styles.legendContainer}>
             <View style={styles.legendCircle} />
             <Text style={styles.legendText}>Quedaría fuera de playoffs</Text>
-          </View>
+          </View> */}
         </>
       )}
     </View>
@@ -152,12 +152,12 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center'
   },
-  textOut: {
-    color: '#A90000',
-    textShadowColor: '#000',
-    textShadowOffset: {width: 0.4, height: 0.4},
-    textShadowRadius: 1
-  },  
+  // textOut: {
+  //   color: '#A90000',
+  //   textShadowColor: '#000',
+  //   textShadowOffset: {width: 0.4, height: 0.4},
+  //   textShadowRadius: 1
+  // },  
   legendContainer: {
     flexDirection: 'row',
     alignItems: 'center',
