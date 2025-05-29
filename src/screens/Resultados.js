@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchPartidos } from '../../services/partidos';
 import { useWindowDimensions } from 'react-native';
 

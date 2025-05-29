@@ -4,11 +4,11 @@
     "slug": "AppPromocional",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/UyP.png",
+    "icon": "./assets/equipos/UyP.webp",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/UyP.png",
+      "image": "./assets/equipos/UyP.webp",
       "resizeMode": "contain",
       "backgroundColor": "#1a1a1a"
     },
@@ -23,7 +23,7 @@
       "package": "com.piccoli.AppPromocional"
     },
     "web": {
-      "favicon": "./assets/UyP.png",
+      "favicon": "./assets/equipos/UyP.webp",
       "name": "Promocional 2025"
     }
   }

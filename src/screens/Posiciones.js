@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { fetchPartidos } from '../../services/partidos'; 
 
@@ -12,8 +12,39 @@ const Posiciones = () => {
         const posiciones = calcularPosiciones(partidos);
         const ordenados = posiciones.sort((a, b) => {
           if (b.puntos !== a.puntos) return b.puntos - a.puntos;
-          return b.dg - a.dg;
+          
+          // Si tienen los mismos puntos, miramos el enfrentamiento entre ellos
+          const resultadoEntreEllos = partidos.find(
+            (p) =>
+              (p.equipoLocal === a.equipo && p.equipoVisitante === b.equipo) ||
+              (p.equipoLocal === b.equipo && p.equipoVisitante === a.equipo)
+          );
+
+          if (resultadoEntreEllos) {
+            const { equipoLocal, puntosLocal, equipoVisitante, puntosVisitante } = resultadoEntreEllos;
+
+            if (
+              equipoLocal === a.equipo &&
+              puntosLocal > puntosVisitante
+            ) return -1;
+            if (
+              equipoVisitante === a.equipo &&
+              puntosVisitante > puntosLocal
+            ) return -1;
+            if (
+              equipoLocal === b.equipo &&
+              puntosLocal > puntosVisitante
+            ) return 1;
+            if (
+              equipoVisitante === b.equipo &&
+              puntosVisitante > puntosLocal
+            ) return 1;
+          }
+
+          // Si empataron entre ellos o no se enfrentaron aún
+          return 0;
         });
+
         setTabla(ordenados);
         setLoading(false);
       };
@@ -90,10 +121,6 @@ const Posiciones = () => {
               );
             })            
           }
-          {/* <View style={styles.legendContainer}>
-            <View style={styles.legendCircle} />
-            <Text style={styles.legendText}>Quedaría fuera de playoffs</Text>
-          </View> */}
         </>
       )}
     </View>
@@ -152,12 +179,6 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center'
   },
-  // textOut: {
-  //   color: '#A90000',
-  //   textShadowColor: '#000',
-  //   textShadowOffset: {width: 0.4, height: 0.4},
-  //   textShadowRadius: 1
-  // },  
   legendContainer: {
     flexDirection: 'row',
     alignItems: 'center',

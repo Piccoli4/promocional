@@ -2,8 +2,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Posiciones from './src/screens/Posiciones';
-import escudoUyP from './assets/UyP.png';
+import escudoUyP from './assets/equipos/UyP.webp';
 import Resultados from './src/screens/Resultados';
+import Playoffs from './src/screens/Playoffs';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         style={styles.background}
       >
         <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: 150 }]}>
+          <Playoffs />
           <Posiciones />
           <Resultados />
         </ScrollView>
