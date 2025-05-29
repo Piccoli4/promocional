@@ -2,7 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Posiciones from './src/screens/Posiciones';
-import escudoUyP from './assets/equipos/UyP.webp';
+import escudoUyP from './assets/equipos/UyP.png';
 import Resultados from './src/screens/Resultados';
 import Playoffs from './src/screens/Playoffs';
 
