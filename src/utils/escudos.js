@@ -1,13 +1,13 @@
 const escudos = {
-  aleyes: require('../../assets/equipos/ALeyes.webp'),
-  alumni: require('../../assets/equipos/Alumni.webp'),
-  atleticofranck: require('../../assets/equipos/AtleticoFranck.webp'),
-  colonsj: require('../../assets/equipos/ColonSJ.webp'),
-  elpozo: require('../../assets/equipos/ElPozo.webp'),
-  kimberley: require('../../assets/equipos/Kimberley.webp'),
-  recreo: require('../../assets/equipos/Recreo.webp'),
-  rincon: require('../../assets/equipos/Rincon.webp'),
-  unionyprogreso: require('../../assets/equipos/UyP.webp'),
+  aleyes: require('../../assets/equipos/ALeyes.png'),
+  alumni: require('../../assets/equipos/Alumni.png'),
+  atleticofranck: require('../../assets/equipos/AtleticoFranck.png'),
+  colonsj: require('../../assets/equipos/ColonSJ.png'),
+  elpozo: require('../../assets/equipos/ElPozo.png'),
+  kimberley: require('../../assets/equipos/Kimberley.png'),
+  recreo: require('../../assets/equipos/Recreo.png'),
+  rincon: require('../../assets/equipos/Rincon.png'),
+  unionyprogreso: require('../../assets/equipos/UyP.png'),
 };
 
 export default escudos;
