@@ -104,7 +104,7 @@ const Playoffs = () => {
                     <Text style={styles.semifinales}>Semifinales</Text>
                     <Escudo nombre={primero.equipo} />
                     <Text style={styles.vs}>vs</Text>
-                    <Text style={styles.texto}>Ganador 3ro vs 6to</Text>
+                    <Text style={styles.texto}>Ganador Play-in 1</Text>
                 </View>
                 <View>
                     <Text style={styles.final}>FINAL</Text>
@@ -113,7 +113,7 @@ const Playoffs = () => {
                     <Text style={styles.semifinales}>Semifinales</Text>
                     <Escudo nombre={segundo.equipo} />
                     <Text style={styles.vs}>vs</Text>
-                    <Text style={styles.texto}>Ganador 4to vs 5to</Text>
+                    <Text style={styles.texto}>Ganador Play-in 2</Text>
                 </View>
             </View>
 
@@ -141,7 +141,7 @@ const Playoffs = () => {
                 <View style={styles.playoffsIzquierda}>
                     <Escudo nombre={septimo.equipo} />
                     <Text style={styles.vs}>vs</Text>
-                    <Text style={styles.texto}>Perdedor 3ro vs 6to</Text>
+                    <Text style={styles.texto}>Perdedor Play-in 1</Text>
                 </View>
                 <View>
                     <Text style={styles.final}>FINAL</Text>
@@ -149,7 +149,7 @@ const Playoffs = () => {
                 <View style={styles.playoffsDerecha}>
                     <Escudo nombre={octavo.equipo} />
                     <Text style={styles.vs}>vs</Text>
-                    <Text style={styles.texto}>Perdedor 4to vs 5to</Text>
+                    <Text style={styles.texto}>Perdedor Play-in 2</Text>
                 </View>
             </View>
         </View>
